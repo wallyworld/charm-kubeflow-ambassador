@@ -1,0 +1,14 @@
+name: kubeflow-ambassador
+summary: The Ambassador API Gateway for KubeFlow
+maintainers:
+  - Juju Developers <juju@lists.ubuntu.com>
+description: |
+  This charm deploys the Ambassador API Gateway configured for use with
+  Kubeflow to Kubernetes models in Juju.
+tags:
+  - machine-learning
+  - ai
+  - bigdata
+  - kubeflow
+series:
+  - kubernetes
