@@ -9,7 +9,7 @@ from charms.layer.basic import pod_spec_set
 
 @when_not('charm.kubeflow-ambassador.started')
 def start_charm():
-    layer.status.maintenance('configuring ambassador container')
+    layer.status.maintenance('configuring container')
 
     pod_spec_set(yaml.dump({
         'containers': [
@@ -43,5 +43,5 @@ def start_charm():
         ],
     }))
 
-    layer.status.active('ready')
+    layer.status.maintenance('creating container')
     set_flag('charm.kubeflow-ambassador.started')
