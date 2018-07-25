@@ -12,3 +12,7 @@ tags:
   - kubeflow
 series:
   - kubernetes
+resources:
+  ambassador-image:
+    type: docker
+    description: 'Image for ambassador'
