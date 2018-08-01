@@ -16,3 +16,4 @@ resources:
   ambassador-image:
     type: docker
     description: 'Image for ambassador'
+    auto-fetch: true

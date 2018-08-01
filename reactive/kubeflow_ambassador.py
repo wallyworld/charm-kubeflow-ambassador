@@ -6,12 +6,7 @@ from charms.reactive import when, when_not
 from charms import layer
 
 
-@when_not('layer.docker-resource.ambassador-image.fetched')
-def fetch_image():
-    layer.docker_resource.fetch('ambassador-image')
-
-
-@when('layer.docker-resource.ambassador-image.fetched')
+@when('layer.docker-resource.ambassador-image.available')
 @when_not('charm.kubeflow-ambassador.started')
 def start_charm():
     layer.status.maintenance('configuring container')
